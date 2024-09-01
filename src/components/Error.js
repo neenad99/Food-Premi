@@ -9,11 +9,11 @@ const Error = () => {
             <h3 className="text-lg text-gray-600">
                 {err.status} : {err.statusText}
             </h3>
-            <button className="mt-6 px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
-                <Link to="/">
+            <Link to="/">
+                <button className="mt-6 px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
                     Go to Home Page
-                </Link>
-            </button>
+                </button>
+            </Link>
         </div>
     );
 };
