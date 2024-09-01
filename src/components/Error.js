@@ -1,14 +1,21 @@
-import { useRouteError } from "react-router-dom";
+import { Link, useRouteError } from "react-router-dom";
 
 const Error = () => {
     const err = useRouteError();
     return (
-        <div>
-            <h1>Ooops! ...</h1>
-            <h2>Something Went Wrong!!</h2>
-            <h3>{err.status} : {err.statusText} </h3>
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
+            <h1 className="text-6xl font-bold text-red-600 mb-4">Ooops!...</h1>
+            <h2 className="text-2xl text-gray-800 mb-2">Something Went Wrong!!</h2>
+            <h3 className="text-lg text-gray-600">
+                {err.status} : {err.statusText}
+            </h3>
+            <button className="mt-6 px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+                <Link to="/">
+                    Go to Home Page
+                </Link>
+            </button>
         </div>
     );
-}
+};
 
 export default Error;
