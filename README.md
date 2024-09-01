@@ -1,7 +1,7 @@
 # Food Ordering App
 
 ## Demo Link
-- [Add the demo link here]
+- [DEMO LINK](https://food-premi.vercel.app/)
 
 ## Table of Contents
 1. [About the Project](#about-the-project)
