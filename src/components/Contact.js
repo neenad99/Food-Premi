@@ -14,7 +14,6 @@ const Contact = () => {
                     rows="4"
                 />
                 <button 
-                    type="submit"
                     className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300 dark:bg-blue-500 dark:hover:bg-blue-600"
                 >
                     Submit
