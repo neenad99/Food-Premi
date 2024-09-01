@@ -7,6 +7,7 @@ import Error from "./components/Error.js";
 import { Provider } from "react-redux";
 import { createBrowserRouter,Outlet,RouterProvider } from "react-router-dom";
 import appStore from "./utils/appStore.js";
+import Shimmer from "./components/Shimmer.js";
 
 
 const About = lazy(() => import("./components/About.js"));
@@ -36,7 +37,7 @@ const appRouter = createBrowserRouter([
             },
             {
                 path:"/about",
-                element:<Suspense fallback={<h1>Loading ...</h1>}><About/></Suspense>
+                element:<Suspense fallback={<Shimmer/>}><About/></Suspense>
             },
             {
                 path:"/contact",
@@ -44,11 +45,11 @@ const appRouter = createBrowserRouter([
             },
             {
                 path:"/restaurants/:restroId",
-                element:<Suspense fallback = {<h1>Loading ...</h1>}><RestaurantMenu/></Suspense>
+                element:<Suspense fallback = {<Shimmer/>}><RestaurantMenu/></Suspense>
             },
             {
                 path:"/cart",
-                element:<Suspense fallback = {<h1>Loading ...</h1>}><Cart/></Suspense>
+                element:<Suspense fallback = {<Shimmer/>}><Cart/></Suspense>
             }
         ],
         errorElement:<Error/>
